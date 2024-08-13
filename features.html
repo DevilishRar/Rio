@@ -1,0 +1,187 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Rio</title>
+	<link rel="icon" href="https://cdn.discordapp.com/icons/1261332477687894187/776031df386adbe3cc0cbaf7822fe30c.webp?size=96">
+	<meta name="theme-color" content="#0b3d91">
+	<meta property="og:title" content="Rio - Level 8">
+	<meta property="og:description" content="Rio UNC & RENC Scripting Utility.">
+	<meta property="og:image" content="https://cdn.discordapp.com/icons/1261332477687894187/776031df386adbe3cc0cbaf7822fe30c.webp?size=96">
+	<meta property="og:type" content="website">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700&display=swap" rel="stylesheet">
+    <style>
+        body {
+            font-family: 'Inter', sans-serif;
+            background-color: #0b0b0b;
+            overflow: hidden;
+            position: relative;
+        }
+
+        .star {
+            position: absolute;
+            border-radius: 50%;
+            background-color: rgba(255, 255, 255, 0.8);
+            box-shadow: 0 0 8px rgba(255, 255, 255, 0.8);
+            width: 2px;
+            height: 2px;
+            opacity: 0.9;
+        }
+
+        .glow-text {
+            font-weight: 700;
+            font-size: 2.5rem;
+            color: #fff;
+            opacity: 0;
+            transform: translateY(20px);
+            animation: fadeInUp 1s ease-in-out forwards;
+            text-align: center;
+            margin-bottom: 20px;
+        }
+
+        .features-container {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 1.5rem;
+            max-width: 1200px;
+            margin: 0 auto;
+            padding-top: 20px;
+        }
+
+        .feature-card {
+            background-color: rgba(34, 34, 34, 0.6);
+            border: 0.5px solid rgba(255, 255, 255, 0.3);
+            box-shadow: 0 0 10px rgba(255, 255, 255, 0.3);
+            transition: transform 0.3s ease;
+            width: 100%;
+            max-width: 500px;
+            height: 150px;
+            opacity: 0;
+            transform: translateY(20px);
+            animation: fadeInUp 1s ease-in-out forwards;
+        }
+
+        .feature-card:nth-child(2),
+        .feature-card:nth-child(4) {
+            animation-delay: 0.2s;
+        }
+
+        .feature-card:nth-child(3),
+        .feature-card:nth-child(4) {
+            animation-delay: 0.4s;
+        }
+
+        .feature-card:hover {
+            transform: scale(1.05);
+        }
+
+        .feature-card h3 {
+            font-weight: 700;
+            color: #fff;
+        }
+
+        .feature-card p {
+            font-weight: 400;
+            color: #a3a3a3;
+            margin-top: 8px;
+            line-height: 1.4;
+        }
+
+        #content-wrapper {
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+            align-items: center;
+            min-height: 100vh;
+            transform-origin: top left;
+            opacity: 0;
+            animation: fadeIn 1.5s ease-in-out forwards;
+        }
+
+        nav {
+            text-align: center;
+            padding-top: 10px;
+        }
+
+        .bottom-text {
+            margin-bottom: 20px;
+            text-align: center;
+        }
+
+        @keyframes fadeInUp {
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        @keyframes fadeIn {
+            to {
+                opacity: 1;
+            }
+        }
+    </style>
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            const starCount = 100;
+            const body = document.body;
+
+            for (let i = 0; i < starCount; i++) {
+                const star = document.createElement('div');
+                star.classList.add('star');
+                star.style.top = `${Math.random() * 100}vh`;
+                star.style.left = `${Math.random() * 100}vw`;
+                star.style.width = `${Math.random() * 3 + 1}px`;
+                star.style.height = star.style.width;
+                body.appendChild(star);
+            }
+        });
+    </script>
+</head>
+
+<body class="text-white">
+
+    <div id="content-wrapper">
+        <nav class="mt-6">
+            <ul class="flex justify-center space-x-8 text-white/75">
+                <li><a href="index.html" class="hover:text-white">Home</a></li>
+                <li><a href="https://discord.gg/WV4cJPgHPn" class="hover:text-white">Discord</a></li>
+                <li><a href="features.html" class="hover:text-white">Features</a></li>
+            </ul>
+        </nav>
+
+        <div class="text-center max-w-2xl">
+            <h2 class="glow-text">Features</h2>
+        </div>
+
+        <div class="features-container">
+            <div class="feature-card p-4 rounded-md">
+                <h3>Upcoming Paid Executor</h3>
+                <p>This executor provides a cost-effective solution with a balance of features and user support. It's tailored for those looking to enhance their scripting experience with reliability and ease.</p>
+            </div>
+            <div class="feature-card p-4 rounded-md">
+                <h3>Fast Injection</h3>
+                <p>Our executor ensures that your scripts are injected quickly and securely, minimizing downtime and maximizing efficiency for uninterrupted gameplay.</p>
+            </div>
+            <div class="feature-card p-4 rounded-md">
+                <h3>Support Team</h3>
+                <p>With a responsive support team, we ensure that all your queries and issues are addressed promptly, providing you with a smooth user experience.</p>
+            </div>
+            <div class="feature-card p-4 rounded-md">
+                <h3>High UNC & RENC</h3>
+                <p>Our executor boasts high success rates for UNC and RENC, delivering superior performance and precision in executing complex scripts.</p>
+            </div>
+        </div>
+
+        <div class="bottom-text">
+            <p class="text-white/30">Launch Execute Dominate</p>
+        </div>
+    </div>
+
+</body>
+
+</html>
